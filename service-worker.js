@@ -1,3 +1,4 @@
+// /(^oo^)\ 
 function Checkwebsites(websiteurl){
     let satireurl = ["theonion.com", "cracked.com" , "babylonbee.com"];
     if (websiteurl.length === 0 ) {
