@@ -6,7 +6,7 @@
     "default_locale": "en",
     "content_scripts":[
       {
-        "matches": ["https://www.google.com/search"],
+        "matches": ["https://*.google.com/search*"],
         "js": ["birdReadins.js"]
       }
     ]
