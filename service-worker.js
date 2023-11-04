@@ -5,7 +5,7 @@ function Checkwebsites(websiteurl){
     }
     let infunction = new URL(websiteurl) ;
 
-    satireurl.forEach(url , () => {
+    satireurl.forEach( (url) => {
         if (url == infunction.hostname){
             return "This is a satire site, displays funny information"
         }
