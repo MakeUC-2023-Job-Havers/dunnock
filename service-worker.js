@@ -11,4 +11,8 @@ function Checkwebsites(websiteurl){
             return "This is a satire site, displays funny information";
         }
     } )
-}
+};
+
+readingList.forEach(element => {
+    Checkwebsites(element);
+});
