@@ -4,11 +4,11 @@ function Checkwebsites(websiteurl){
     if (websiteurl.length === 0 ) {
         return "The website url provided is empty";
     }
-    let infunction = new URL(websiteurl) ;
+    let givensiteUrl = new URL(websiteurl) ;
 
     satireurl.forEach( (url) => {
-        if (url == infunction.hostname){
-            return "This is a satire site, displays funny information"
+        if (url == givensiteUrl.hostname){
+            return "This is a satire site, displays funny information";
         }
     } )
 }
