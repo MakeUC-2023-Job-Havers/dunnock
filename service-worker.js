@@ -14,6 +14,6 @@ function Checkwebsites(websiteurl){
     } )
 };
 
-// readingList.forEach(element => {
-//     Checkwebsites(element);
-// });
+readingList.forEach(element => {
+     Checkwebsites(element);
+ });
