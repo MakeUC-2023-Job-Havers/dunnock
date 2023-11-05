@@ -8,3 +8,4 @@ readingContent.forEach(element => {
     
 });
 
+alert('Hello, world!');
