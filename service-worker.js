@@ -9,7 +9,7 @@ function Checkwebsites(websiteurl){
 
     satireurl.forEach( (url) => {
         if (url == givensiteUrl.hostname){
-            alert("We have a Satire Site");
+           
             return "This is a satire site, displays funny information";
         }
     } )
@@ -22,6 +22,7 @@ chrome.runtime.onMessage.addListener(
             if (request.list){
             request.list.forEach(element => {
                 Checkwebsites(element);
+                alert("We have a Satire Site");
             });
         }
     }
