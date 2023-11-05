@@ -3,6 +3,7 @@
 function Checkwebsites(websiteurl){
     let satireurl = ["https://www.theonion.com", "cracked.com" , "babylonbee.com"];
     if (websiteurl.length === 0 ) {
+        console.log("Empty");
         return "The website url provided is empty";
     }
     let givensiteUrl = new URL(websiteurl) ;
