@@ -20,15 +20,14 @@ function Checkwebsites(websiteurl){
 chrome.runtime.onMessage.addListener(
     
     function(request,sender,sendResponse){
-        console.log(sender.tab ?
-            "from a content script:" + sender.tab.url :
-            "from the extension");
-            if (request.list){
-            request.list.forEach(element => {
-                Checkwebsites(element);
-                
-            });
-        }
+    console.log(sender.tab ?
+        "from a content script:" + sender.tab.url :
+        "from the extension");
+        
+        request.list.forEach(element => {
+            Checkwebsites(element);
+            
+        });
     }
 )
 
