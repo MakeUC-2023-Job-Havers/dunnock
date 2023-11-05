@@ -3,12 +3,20 @@
     "name": "Dunnock",
     "description": "A fact checking Chrome extension.",
     "version": "0.0.1",
-    "default_locale": "en",
-    "content_scripts":[
-      {
-        "matches": ["https://www.google.com/search"],
-        "js": ["birdReadins.js"]
-      }
-    ]
-  }
-  
+    "icons": {
+        "128": "./icons/dunnock_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/search*"
+            ],
+            "js": [
+                "./scripts/birdReading.js"
+            ]
+        }
+    ],
+    "background": {
+		"service_worker": "service-worker.js"
+	}
+}

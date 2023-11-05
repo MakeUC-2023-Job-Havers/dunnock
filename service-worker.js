@@ -8,7 +8,12 @@ function Checkwebsites(websiteurl){
 
     satireurl.forEach( (url) => {
         if (url == givensiteUrl.hostname){
+            alert("We have a Satire Site");
             return "This is a satire site, displays funny information";
         }
     } )
-}
+};
+
+// readingList.forEach(element => {
+//     Checkwebsites(element);
+// });
