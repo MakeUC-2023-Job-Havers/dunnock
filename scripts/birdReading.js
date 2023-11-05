@@ -7,5 +7,8 @@ readingContent.forEach(element => {
     }
     
 });
-export{readingList};
+(async() =>{
+    const response = await chrome.runtime.sendMessage({
+        readingList});
+})();
 alert('Hello, world!');

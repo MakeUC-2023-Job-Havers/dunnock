@@ -1,5 +1,5 @@
 // /(^oo^)\ 
-import { readingList } from "./scripts/birdReading";
+
 function Checkwebsites(websiteurl){
     let satireurl = ["https://www.theonion.com", "cracked.com" , "babylonbee.com"];
     if (websiteurl.length === 0 ) {
@@ -14,7 +14,11 @@ function Checkwebsites(websiteurl){
         }
     } )
 };
+(async() =>{
+    const [tab] = await chrome.tabs.query({active:true, lastFocusWindow: true});
+    const response = await chrome.tabs.sendMessage(tab.id,{readingList});
+    readingList.forEach(element => {
+        Checkwebsites(element);
+    });
+})
 
-readingList.forEach(element => {
-     Checkwebsites(element);
- });
