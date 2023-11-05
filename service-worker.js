@@ -12,7 +12,13 @@ function Checkwebsites(websiteurl){
             return "This is a satire site, displays funny information";
         }
     } )
-};
+}
+
+chrome.runtime.onMessage.addListener(async (message, sender) => {
+    if (message.type === 'open_side_panel') {
+        await chrome.sidePanel.open({ tabId: sender.tab.id });
+    }
+})
 
 // readingList.forEach(element => {
 //     Checkwebsites(element);

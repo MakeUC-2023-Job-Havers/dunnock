@@ -10,7 +10,7 @@
 document.addEventListener('keydown', (e) => {
     if (e.key == 'k') {
         console.log('side panel opened');
-        chrome.sidePanel.open();
+        chrome.runtime.sendMessage({ type: 'open_side_panel' });
     }
 })
 
