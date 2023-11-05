@@ -1,4 +1,5 @@
 // /(^oo^)\ 
+import { readingList } from "./scripts/birdReading";
 function Checkwebsites(websiteurl){
     let satireurl = ["https://www.theonion.com", "cracked.com" , "babylonbee.com"];
     if (websiteurl.length === 0 ) {

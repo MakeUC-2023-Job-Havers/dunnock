@@ -7,5 +7,5 @@ readingContent.forEach(element => {
     }
     
 });
-
+export{readingList};
 alert('Hello, world!');
