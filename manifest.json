@@ -6,17 +6,25 @@
     "icons": {
         "128": "./icons/dunnock_128.png"
     },
+    "permissions": [
+        "sidePanel"
+    ],
     "content_scripts": [
         {
             "matches": [
                 "https://www.google.com/search*"
             ],
             "js": [
-                "./scripts/birdReading.js"
+                "./scripts/birdReading.js",
+                "./scripts/openPanel.js"
             ]
         }
     ],
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
     "background": {
-		"service_worker": "service-worker.js"
-	}
+        "service_worker": "service-worker.js"
+    }
+    
 }
