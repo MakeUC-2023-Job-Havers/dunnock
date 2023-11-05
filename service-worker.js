@@ -9,12 +9,13 @@ function Checkwebsites(websiteurl){
 
     satireurl.forEach( (url) => {
         if (url == givensiteUrl.hostname){
-           
+            console.log("We have a satire site.");
             return "This is a satire site, displays funny information";
         }
     } )
 };
 chrome.runtime.onMessage.addListener(
+    
     function(request,sender,sendResponse){
         console.log(sender.tab ?
             "from a content script:" + sender.tab.url :
@@ -22,7 +23,7 @@ chrome.runtime.onMessage.addListener(
             if (request.list){
             request.list.forEach(element => {
                 Checkwebsites(element);
-                alert("We have a Satire Site");
+                
             });
         }
     }
