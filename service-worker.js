@@ -1,5 +1,5 @@
 // /(^oo^)\ 
-
+console.log("Running file");
 function Checkwebsites(websiteurl){
     let satireurl = ["https://www.theonion.com", "cracked.com" , "babylonbee.com"];
     if (websiteurl.length === 0 ) {
