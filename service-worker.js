@@ -14,11 +14,15 @@ function Checkwebsites(websiteurl){
         }
     } )
 };
-(async() =>{
-    const [tab] = await chrome.tabs.query({active:true, lastFocusWindow: true});
-    const response = await chrome.tabs.sendMessage(tab.id,{readingList});
-    readingList.forEach(element => {
-        Checkwebsites(element);
-    });
-})
+chrome.runtime.onMessage.addListener(
+    function(request,sender,sendResponse){
+        console.log(sender.tab ?
+            "from a content script:" + sender.tab.url :
+            "from the extension");
+            if (request.list)
+            readingList.forEach(element => {
+                Checkwebsites(element);
+            });
+    }
+)
 

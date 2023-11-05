@@ -9,6 +9,6 @@ readingContent.forEach(element => {
 });
 (async() =>{
     const response = await chrome.runtime.sendMessage({
-        readingList});
+        list: readingList});
 })();
 alert('Hello, world!');
