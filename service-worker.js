@@ -23,7 +23,7 @@ chrome.runtime.onMessage.addListener(
     console.log(sender.tab ?
         "from a content script:" + sender.tab.url :
         "from the extension");
-        
+        console.log(request.list);
         request.list.forEach(element => {
             console.log("Loop is running.");
             Checkwebsites(element);
