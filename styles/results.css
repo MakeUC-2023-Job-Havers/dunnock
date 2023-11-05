@@ -1,0 +1,15 @@
+.fact-label {
+    border-radius: 5px;
+    border: 1px solid var(--dark-red, #D14D3F);
+    background-color: #FBEEEC;
+    color: var(--dark-red, #D14D3F);
+    text-decoration: none;
+    margin-top: 18px;
+    display: inline-block;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-right: 5px;
+    
+    cursor: pointer;
+    user-select: none;
+}
