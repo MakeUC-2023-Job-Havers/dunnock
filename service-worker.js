@@ -19,10 +19,11 @@ chrome.runtime.onMessage.addListener(
         console.log(sender.tab ?
             "from a content script:" + sender.tab.url :
             "from the extension");
-            if (request.list)
-            readingList.forEach(element => {
+            if (request.list){
+            request.list.forEach(element => {
                 Checkwebsites(element);
             });
+        }
     }
 )
 
